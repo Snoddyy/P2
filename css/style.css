@@ -90,7 +90,7 @@ nav a:hover {
   align-items: center;
 }
 
-.searchbar * {
+.searchbar > * {
   padding: 1rem;
 }
 
@@ -101,7 +101,9 @@ nav a:hover {
 }
 
 .searchbar input {
-  flex-basis: 8;
+  flex-basis: 16;
+  flex-shrink: 2;
+  overflow: auto;
   padding-right: 6rem;
   border: 2px solid #f2f2f2;
 }
@@ -110,15 +112,35 @@ nav a:hover {
   font-weight: 700;
   color: inherit;
   font-size: 1rem;
-  padding-left: 1rem;
 }
 
 .searchbar button {
   background-color: #0065fc;
   color: white;
-  font-size: 1.2rem;
   font-weight: bold;
   border-radius: 0 1.2rem 1.2rem 0;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
+  opacity: 0.8;
+  transition: transform 150ms;
+}
+
+.searchbar button:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.fa-solid.fa-magnifying-glass {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    display: none;
+  }
+  .fa-solid.fa-magnifying-glass {
+    display: inline;
+    background-color: #0065fc;
+  }
 }
