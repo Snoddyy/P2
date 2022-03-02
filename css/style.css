@@ -192,14 +192,14 @@ nav a:hover {
   background-color: #deebff;
 }
 
-/* RESULTS */
-.results {
+/* INFOS */
+.infos {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.results .fa-solid {
+.infos .fa-solid {
   color: #0065fc;
   border: 2px solid #f2f2f2;
   border-radius: 50%;
@@ -208,4 +208,91 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* APARTMENTS */
+.apartments {
+  display: flex;
+  gap: 1rem;
+  /* PH */
+}
+
+.apartments > div {
+  border: 1px solid red;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+}
+
+.marseille {
+  flex-basis: 66%;
+}
+
+.marseille a {
+  font-weight: bold;
+}
+
+.marseille-apartments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.marseille-apartments div {
+  flex-basis: calc(33%-1rem);
+}
+
+.popular-flex {
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  /* TABLETTE */
+}
+
+@media (max-width: 768px) {
+  /* MOBILE */
+  .apartments {
+    flex-direction: column;
+  }
+
+  .popular {
+    order: -1;
+  }
+
+  .popular-flex {
+    flex-direction: row;
+  }
+}
+
+/* APARTMENT BOX */
+
+.blue {
+  color: #0065fc;
+}
+
+.grey {
+  color: lightgrey;
+}
+
+.apartments-box {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.2rem;
+  box-shadow: 0 0 16px #0000002e;
+}
+
+.apartments-box img {
+  border-radius: 1rem 1rem 0 0;
+  height: 10rem;
+}
+
+.apartments-box p,
+.apartments-box h3 {
+  margin: 0.3rem;
 }
